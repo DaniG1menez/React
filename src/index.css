@@ -1,68 +1,197 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Estilos globales */
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  background-color: rgb(211, 224, 208);
+  height: auto;
+}
+
+/* Header */
+
+
+/* Items */
+.items {
+  margin: 40px auto 100px auto;
+  width: 1010px;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
+.card-pro {
+  margin: 18px;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #012520f6;
+  width: 200px;
+  height: 350px;
+  position: relative;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.card-img {
+  width: 200px;
+  border-radius: 8px;
+}
+
+.card-title {
+  font-size: 8pt;
+  margin-top: 5px;
+  text-align: left;
+  padding: 10px 0 0 20px;
+  color: aliceblue;
+}
+
+.card-text {
+  font-size: 12pt;
+  padding-left: 15px;
+  margin: 5px 0 10px 20px;
+  color: aliceblue;
+  position: absolute;
+  bottom: 0px;
+  left: -15px;
+}
+
+.btn-primary {
+  border: none;
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  height: 50px;
+  width: 50px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 8px;
+  background-color: aliceblue;
+  font-size: 13pt;
+}
+
+.btn-primary:hover {
+  transition: 0.3s;
+  background-color: rgb(48, 127, 74);
+  color: aliceblue;
+}
+
+/* Buscador */
+.contenedorBuscador {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  align-items: center;
+  margin-top: 60px;
+}
+
+#buscadorProduc {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgb(26, 57, 56);
+  width: 400px;
+  height: 25px;
+  padding: 20px;
+  margin: 0 20px;
+  font-size: 20pt;
+}
+
+#botonbuscador {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: rgb(26, 57, 56);
+  color: aliceblue;
+  transition: 0.3s;
+}
+
+#botonbuscador:hover {
+  transform: scale(1.1);
+  background: rgba(26, 57, 56, 0.675);
+}
+
+/* Carrito de compras */
+.contenedorCarrito {
+  margin-top: 100px;
+  background-color: rgb(26, 57, 56);
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.contenedorCarrito h2 {
+  text-align: center;
+  font-size: 30pt;
+  padding: 10px 0;
+  color: aliceblue;
+  margin: 10px 0;
+}
+
+#carrito {
+  background-color: aliceblue;
+  background-image: url('../img/carrito.png');
+  background-repeat: no-repeat;
+  background-position: 100px;
+  background-size: 350px;
+  background-position-x: 80%;
+  padding-left: 40px;
+  width: 93.5%;
+  border-radius: 10px;
+  margin: auto;
+}
+
+#carrito li {
+  padding: 10px 40px;
+}
+
+.textoderecha {
+  height: 100%;
+  width: 250px;
+}
+
+.contenedorTotalVaciar {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 70px;
+  align-items: center;
+}
+
+.textoderecha {
+  font-size: 18pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+  border-bottom: 2px solid black;
+  color: aliceblue;
+}
+
+.tacho {
+  font-size: 30pt;
+}
+
+#botonVaciar {
+  width: 70px;
+  height: 50px;
+  font-size: 17pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(255, 154, 154);
+  border: none;
+  transition: 0.3s;
+}
+
+#botonVaciar:hover {
+  background-color: rgb(209, 19, 19);
+  transform: scale(1.15);
+  color: aliceblue;
 }
