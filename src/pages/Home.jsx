@@ -8,7 +8,7 @@ import { NavBar } from "../componentes";
 import { style } from "framer-motion/client";
 
 
- export const Home = () => {
+export const Home = () => {
   const [cartItems, setCartItems] = useState(0);
   
   
@@ -33,7 +33,6 @@ import { style } from "framer-motion/client";
   ) : (
     <>
     
-    <ItemListContainer greeting="CASA DRODA"/>
     <ItemList products={productsData} />
     
     </>
